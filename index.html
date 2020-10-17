@@ -751,6 +751,32 @@
 
 
     <script src="js/main.js"></script>
+    
+  </script>
+  <script type="text/javascript">
+  window.onscroll = function() {myFunction()};
+  let progress=document.getElementById('progressbar');
+  let totalh = document.body.scrollHeight - window.innerHeight;
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+if (window.pageYOffset > sticky) {
+  header.classList.add("sticky")
+  let progressh =(window.pageYOffset/totalh)*100+3;
+  progress.style.width = progressh +"%";;
+} else {
+  header.classList.remove("sticky");
+  let progressh =(window.pageYOffset/totalh)*100+3;
+  progress.style.width = progressh +"%";;
+}
+}
+
+  </script>
 </body>
 
 </html>
