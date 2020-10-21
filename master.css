@@ -275,7 +275,6 @@ nav {
 
   
 
-#cssmenu ul ul li:hover {}
 
 #cssmenu li:hover>ul {
   left: auto
@@ -484,7 +483,7 @@ button{
 .grid1 .text{
     display: block;
     font: 
-}
+
 .grid1 .text h3 {
   margin:0;
   font-size: 2.2rem;
@@ -510,8 +509,7 @@ button{
   color:red;
 
 }
-.label{
-}
+
 .label:after{
   content:'Creative';
 }
