@@ -482,8 +482,8 @@ button{
 }
 .grid1 .text{
     display: block;
-    font: 
-
+    font: "";
+}
 .grid1 .text h3 {
   margin:0;
   font-size: 2.2rem;
