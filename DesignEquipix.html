@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/apply-snippet.css">
 
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
@@ -209,8 +210,7 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
-                                    <a href="www.devfolio.co/design-equipix" class="boxed-btn3  wow fadeInLeft" data-wow-duration="1s"
-                                        data-wow-delay=".7s">Register on Devfolio</a></div>
+                                    <button id="devfolio-apply-now"><svg class="logo" xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 115.46 123.46" style="height:24px;width:24px;margin-right:8px"><path d="M115.46 68a55.43 55.43 0 0 1-50.85 55.11S28.12 124 16 123a12.6 12.6 0 0 1-10.09-7.5 15.85 15.85 0 0 0 5.36 1.5c4 .34 10.72.51 20.13.51 13.82 0 28.84-.38 29-.38h.26a60.14 60.14 0 0 0 54.72-52.47c.05 1.05.08 2.18.08 3.34z" /><path d="M110.93 55.87A55.43 55.43 0 0 1 60.08 111s-36.48.92-48.58-.12C5 110.29.15 104.22 0 97.52l.2-83.84C.38 7 5.26.94 11.76.41c12.11-1 48.59.12 48.59.12a55.41 55.41 0 0 1 50.58 55.34z"/></svg>Apply with Devfolio</button>
                             </div>
                         </div>
                 
@@ -244,9 +244,23 @@
                                         </div>
                                     
                                     <div class="single_brand text-center">
-                                        <a href="https://www.devfolio.co"><img
-                                                src="devfolio-removebg-preview.png"
-                                                alt="Devfolio"></a>
+                                        <a href="https://www.devfolio.co"><img src="devfolio-removebg-preview.png" alt="Devfolio"></a>
+                                    </div>
+
+                                    <div class="single_brand text-center">
+                                        <a href="https://matic.network/"><img src="devfolio-removebg-preview.png" alt="Matic"></a>
+                                    </div>
+
+                                    <div class="single_brand text-center">
+                                        <a href="https://www.portis.io"><img src="devfolio-removebg-preview.png" alt="Portis"></a>
+                                    </div>
+
+                                    <div class="single_brand text-center">
+                                        <a href="https://tezos.com"><img src="devfolio-removebg-preview.png" alt="Tezos"></a>
+                                    </div>
+
+                                    <div class="single_brand text-center">
+                                        <a href="https://fold.money"><img src="devfolio-removebg-preview.png" alt="Fold"></a>
                                     </div>
 
                                 </div>
@@ -260,6 +274,29 @@
     <!-- footer_end  -->
 
     <!-- JS here -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    let devfolioOptions = {
+        buttonSelector: '#devf
+olio-apply-now',
+        key: 'design-equipix',
+    }
+
+    let script = document.createElement('script');
+    script.src = "https://apply.devfolio.co";
+    document.head.append(script);
+
+    script.onload = function () {
+        new Devfolio(devfolioOptions);
+    }
+
+    script.onerror = function () {
+        document.querySelector(devfolioOptions.buttonSelector).addEventListener('click', function () {
+            window.location.href = 'https://devfolio.co/external-apply/' + devfolioOptions.key;
+        });
+    }
+});
+                        </script>
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="js/popper.min.js"></script>
